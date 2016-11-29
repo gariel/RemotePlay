@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fight Friends Control</title>
+    	<script type="text/javascript">
+		var choose = function(key) {
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET', '/{{player}}/' + key);
+			xhr.send(null);
+		}
+        var asd = function()
+        {
+            setInterval(function() { choose("up"); }, 100);
+            setInterval(function() { choose("left"); }, 200);
+            setInterval(function() { choose("down"); }, 200);
+            setInterval(function() { choose("right"); }, 100)
+        }
+	</script>
+</head>
+<body>
+
+<div>PLAYER: {{player}}</div>
+
+<div>
+    <button onclick="choose('up')">UP</button>
+    <button onclick="choose('left')">LEFT</button>
+    <button onclick="choose('right')">RIGHT</button>
+    <button onclick="choose('down')">DOWN</button>
+</div>
+
+<div>
+    <button onclick="choose('a')">A</button>
+    <button onclick="choose('b')">B</button>
+    <button onclick="asd()">AAAAAAAAAAAAA</button>
+</div>
+
+</body>
+</html>
